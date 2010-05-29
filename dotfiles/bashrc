@@ -4,4 +4,4 @@ source ~/baggage/dotfiles/bash/completion
 source ~/baggage/dotfiles/bash/env
 source ~/baggage/dotfiles/bash/functions
 
-source ~/bin/dotfiles/bash/prompt
+source ~/baggage/dotfiles/bash/prompt
