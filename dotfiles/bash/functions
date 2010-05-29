@@ -1,0 +1,15 @@
+# Prints git or svn info (useful in prompt)
+#
+# Examples:
+#
+#   (git:master) for a git repository
+#   (svn:10835) for a Subversion repository
+scm_ps1() {
+  local s=
+  if [[ -d ".svn" ]] ; then
+    s=\(svn:$(svn info | sed -n -e '/^Revision: \([0-9]*\).*$/s//\1/p' )\)
+  else
+    s=$(__git_ps1 "(git:%s)")
+  fi
+  echo -n "$s"
+}

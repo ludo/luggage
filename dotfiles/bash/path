@@ -1,0 +1,8 @@
+# Baggage
+export PATH=$PATH:~/baggage/bin
+
+# MySQL
+export PATH=/usr/local/mysql/bin:$PATH
+
+# Macports
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH

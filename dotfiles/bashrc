@@ -1,0 +1,7 @@
+source ~/baggage/dotfiles/bash/aliases
+source ~/baggage/dotfiles/bash/colors
+source ~/baggage/dotfiles/bash/completion
+source ~/baggage/dotfiles/bash/env
+source ~/baggage/dotfiles/bash/functions
+
+source ~/bin/dotfiles/bash/prompt
