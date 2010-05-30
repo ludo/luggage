@@ -18,9 +18,12 @@ task :install do
       filename = filename_with_path.split('/').last
       dotfile = File.join(home, ".#{filename}")
 
-      if File.exist?(dotfile)
+      if File.identical?(filename_with_path, dotfile)
+        puts "[identical] #{dotfile} is already linked"
+        next
+      elsif File.exist?(dotfile)
         puts "[exist] Backing up #{dotfile}"
-        mv dotfile, backup_path
+        mv dotfile, "#{backup_path}/#{filename}"
         backup = true
       end
 

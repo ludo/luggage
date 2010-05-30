@@ -13,3 +13,17 @@ __scm_ps1() {
   fi
   echo -n "$s"
 }
+
+# === Git
+
+# Remove all deleted files from the Git repository
+grm() {
+  git status | grep "deleted:" | awk '{print $3}' | xargs git rm --ignore-unmatch
+}
+
+# === Subversion
+
+# Recursively add files to repository
+svn_add_all(){
+  svn status | grep "^\?" | awk '{print $2}' | xargs svn add
+}
