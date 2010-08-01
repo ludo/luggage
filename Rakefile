@@ -14,10 +14,10 @@ task :install do
   puts "Linking dotfiles..."
 
   Dir.glob(File.join(dotfiles_path, '*')) do |filename_with_path|
-    unless File.directory?(filename_with_path)
-      filename = filename_with_path.split('/').last
-      dotfile = File.join(home, ".#{filename}")
+    filename = filename_with_path.split('/').last
+    dotfile = File.join(home, ".#{filename}")
 
+    unless File.directory?(filename_with_path)
       if File.identical?(filename_with_path, dotfile)
         puts "[identical] #{dotfile} is already linked"
         next
@@ -26,10 +26,10 @@ task :install do
         mv dotfile, "#{backup_path}/#{filename}"
         backup = true
       end
-
-      puts "[linking] #{filename_with_path} > #{dotfile}"
-      ln_s filename_with_path, dotfile
     end
+
+    puts "[linking] #{filename_with_path} > #{dotfile}"
+    ln_s filename_with_path, dotfile
   end
 
   if backup

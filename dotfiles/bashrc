@@ -1,13 +1,13 @@
-source ~/baggage/dotfiles/bash/aliases
-source ~/baggage/dotfiles/bash/colors
-source ~/baggage/dotfiles/bash/completion
-source ~/baggage/dotfiles/bash/env
-source ~/baggage/dotfiles/bash/functions
-source ~/baggage/dotfiles/bash/path
+source ~/.bash/aliases
+source ~/.bash/colors
+source ~/.bash/completion
+source ~/.bash/env
+source ~/.bash/functions
+source ~/.bash/path
 
 if [[ -s ~/.rvm/scripts/rvm ]]
 then
   source ~/.rvm/scripts/rvm
 fi
 
-source ~/baggage/dotfiles/bash/prompt
+source ~/.bash/prompt
