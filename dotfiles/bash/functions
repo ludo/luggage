@@ -24,6 +24,12 @@ grm() {
 # === Subversion
 
 # Recursively add files to repository
-svn_add_all(){
+svn_add_all() {
   svn status | grep "^\?" | awk '{print $2}' | xargs svn add
+}
+
+# ==== Utilities
+
+mkpw() { 
+  head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-16};
 }
