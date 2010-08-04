@@ -1,0 +1,7 @@
+" Colors **********************************************************************
+set background=dark 
+syntax on " Syntax highlighting
+colorscheme ir_black
+
+" Misc settings ***************************************************************
+set number " Show line numbers
