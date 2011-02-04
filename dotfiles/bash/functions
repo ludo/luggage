@@ -9,7 +9,18 @@ __scm_ps1() {
   if [[ -d ".svn" ]] ; then
     s=\(svn:$(svn info | sed -n -e '/^Revision: \([0-9]*\).*$/s//\1/p' )\)
   else
-    s=$(__git_ps1 "(git:%s)")
+    local branch=
+    local color=
+
+    branch=$(__git_ps1 "%s")
+
+    case $branch in
+      "develop")  color="\e[0;33m";; # Yellow
+      "master")   color="\e[0;33m";; # Yellow
+      *)          color="\e[0;32m";; # Green
+    esac
+
+    s=$(__git_ps1 "(git:$color$branch\e[0m)")
   fi
   echo -n "$s"
 }
@@ -28,7 +39,7 @@ svn_add_all() {
   svn status | grep "^\?" | awk '{print $2}' | xargs svn add
 }
 
-# ==== Utilities
+# === Utilities
 
 mkpw() { 
   head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-16};
