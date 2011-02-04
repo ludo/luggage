@@ -1,5 +1,9 @@
 export EDITOR=vim
 
+# Locale
+export LANG=C
+export LC_ALL=C
+
 # DirectLife development
 export ACTIVEMQ_HOME=~/apache-activemq-5.2.0
 export ACTIVEMQ_BASE=$HOME/message_broker
