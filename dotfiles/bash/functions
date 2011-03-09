@@ -15,6 +15,7 @@ __scm_ps1() {
     branch=$(__git_ps1 "%s")
 
     case $branch in
+      "deploy")   color="\e[0;33m";; # Yellow
       "develop")  color="\e[0;33m";; # Yellow
       "master")   color="\e[0;33m";; # Yellow
       *)          color="\e[0;32m";; # Green
