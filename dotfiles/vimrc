@@ -2,7 +2,7 @@
 let &t_Co=256 " 256 colors
 set background=dark 
 syntax on " Syntax highlighting
-colorscheme ir_black
+colorscheme solarized
 
 " Misc settings ***************************************************************
 set number " Show line numbers
