@@ -1,2 +1,5 @@
 [push]
   default = tracking
+[user]
+	name = Ludo van den Boom
+	email = ludo@cubicphuse.nl
