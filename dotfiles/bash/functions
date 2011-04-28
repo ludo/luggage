@@ -42,6 +42,18 @@ svn_add_all() {
 
 # === Utilities
 
+# Generate random password
 mkpw() { 
   head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-16};
+}
+
+# Copy my public SSH key to a server's authorized_keys file
+sync_keys() {
+  if [[ -z "$1" ]]; then
+    echo "!! You need to enter a hostname in order to send your public key !!"
+  else
+    echo "* Copying SSH public key to server..."
+    ssh ${1} "mkdir -p ~/.ssh && cat - >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub
+    echo "* All done!"
+  fi
 }

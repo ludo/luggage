@@ -1,5 +1,10 @@
 [push]
-  default = tracking
+	default = tracking
 [user]
 	name = Ludo van den Boom
 	email = ludo@cubicphuse.nl
+[color]
+	diff = auto
+	status = auto
+[http]
+	postBuffer = 100M
