@@ -10,3 +10,6 @@ export ACTIVEMQ_BASE=$HOME/message_broker
 export CATALINA_HOME=~/apache-tomcat-6.0.18
 export CATALINA_BASE=$HOME/appserver
 export ACTIVITY_DATA_ROOT_PATH=$HOME/var/nws
+
+# Node.js
+export NODE_PATH=$HOME/local/lib/node_modules
