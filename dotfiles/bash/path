@@ -1,8 +1,11 @@
-# Baggage
-export PATH=$PATH:~/baggage/bin
+# Luggage
+export PATH=$HOME/luggage/bin:$PATH
 
 # MySQL
 export PATH=/usr/local/mysql/bin:$PATH
 
 # Macports
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# Node.js
+export PATH=$HOME/local/bin:$PATH

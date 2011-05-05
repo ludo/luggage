@@ -40,5 +40,5 @@ end
 desc "Restore user's home folder to original state"
 task :uninstall do
   # rm dotfiles from home filder
-  # mv baggage/backup naar home folder
+  # mv luggage/backup naar home folder
 end
