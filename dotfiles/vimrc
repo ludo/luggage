@@ -1,5 +1,6 @@
 " Pathogen ********************************************************************
 call pathogen#runtime_append_all_bundles() 
+call pathogen#helptags()
 
 " Colors **********************************************************************
 let &t_Co=256 " 256 colors
