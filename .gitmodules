@@ -22,3 +22,6 @@
 [submodule "dotfiles/vim/bundle/vim-haml"]
 	path = dotfiles/vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+[submodule "dotfiles/vim/bundle/vim-rspec"]
+	path = dotfiles/vim/bundle/vim-rspec
+	url = https://github.com/taq/vim-rspec.git
