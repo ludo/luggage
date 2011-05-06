@@ -1,11 +1,12 @@
+set nocompatible
+
 " Pathogen *****************************************************************
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 syntax enable
 
-set background=dark
-set nocompatible
+set background=light
 set number
 set ruler
 
@@ -13,7 +14,7 @@ set ruler
 set encoding=utf-8
 
 " Whitespace stuff
-set nowrap
+set wrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -57,3 +58,15 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+
+" Functions *******************************************************************
+
+" Remove trailing whitespaces in files
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  %s/\t/  /ge
+  call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
