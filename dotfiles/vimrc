@@ -1,14 +1,58 @@
-" Pathogen ********************************************************************
+" Pathogen *****************************************************************
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
-" Colors **********************************************************************
-let &t_Co=256 " 256 colors
 syntax enable
-set background=dark
 
+set background=dark
+set nocompatible
+set number
+set ruler
+
+" Set encoding
+set encoding=utf-8
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list listchars=tab:\ \ ,trail:·
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Status bar
+set laststatus=2
+
+" Colors
 let g:solarized_termcolors=256
+let &t_Co=256 " 256 colors
 colorscheme solarized
 
-" Misc settings ***************************************************************
-set number " Show line numbers
+" Disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Plugins ******************************************************************
+
+" NERDTree configuration
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
+
+" Command-T configuration
+let g:CommandTMaxHeight=20
