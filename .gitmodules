@@ -40,3 +40,6 @@
 [submodule "dotfiles/vim/bundle/command-t"]
 	path = dotfiles/vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
+[submodule "dotfiles/vim/bundle/vim-surround"]
+	path = dotfiles/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
