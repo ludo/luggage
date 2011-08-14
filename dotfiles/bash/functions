@@ -43,7 +43,7 @@ svn_add_all() {
 # === Utilities
 
 # Generate random password
-mkpw() { 
+mkpw() {
   head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-16};
 }
 
@@ -57,3 +57,6 @@ sync_keys() {
     echo "* All done!"
   fi
 }
+
+# Set terminal title
+function title() { printf '\033]1;%s\a' "$*"; }
