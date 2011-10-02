@@ -10,6 +10,14 @@ export ACTIVEMQ_BASE=$HOME/message_broker
 export CATALINA_HOME=~/apache-tomcat-6.0.18
 export CATALINA_BASE=$HOME/appserver
 export ACTIVITY_DATA_ROOT_PATH=$HOME/var/nws
+#export TIMESHIFT_URL=http://localhost:3000/timeshift
 
 # Node.js
 export NODE_PATH=$HOME/local/lib/node_modules
+
+# Maven2
+export MAVEN_HOME=/usr/share/java/maven-3.0.3
+export M2_HOME=$MAVEN_HOME
+export M2=$M2_HOME/bin
+export JAVA_HOME=/Library/Java/Home
+export PATH=$M2:$PATH
