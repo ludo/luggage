@@ -6,7 +6,7 @@ call pathogen#helptags()
 
 syntax enable
 
-set background=light
+set background=dark
 set number
 set ruler
 
@@ -57,6 +57,11 @@ set backspace=indent,eol,start
 filetype plugin indent on
 
 " Plugins ******************************************************************
+
+" NERDCommenter
+let NERDDefaultNesting = 0
+let NERDRemoveExtraSpaces = 1
+let NERDSpaceDelims = 1
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
