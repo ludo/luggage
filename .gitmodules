@@ -55,3 +55,6 @@
 [submodule "dotfiles/vim/bundle/vim-css-color"]
 	path = dotfiles/vim/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color.git
+[submodule "dotfiles/vim/bundle/vim-ruby"]
+	path = dotfiles/vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
