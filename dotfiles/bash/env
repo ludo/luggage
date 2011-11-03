@@ -5,12 +5,9 @@ export LANG=C
 export LC_ALL=C
 
 # DirectLife development
-export ACTIVEMQ_HOME=~/apache-activemq-5.2.0
-export ACTIVEMQ_BASE=$HOME/message_broker
-export CATALINA_HOME=~/apache-tomcat-6.0.18
-export CATALINA_BASE=$HOME/appserver
-export ACTIVITY_DATA_ROOT_PATH=$HOME/var/nws
-#export TIMESHIFT_URL=http://localhost:3000/timeshift
+export CATALINA_HOME=/usr/local/tomcat
+export CATALINA_BASE=/Volumes/Philips/ActivityDataService/config/appserver
+export ACTIVITY_DATA_ROOT_PATH=/Volumes/Philips/ActivityDataService/appserver/var/nws
 
 # Node.js
 export NODE_PATH=$HOME/local/lib/node_modules

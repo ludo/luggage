@@ -60,3 +60,13 @@ sync_keys() {
 
 # Set terminal title
 function title() { printf '\033]1;%s\a' "$*"; }
+
+# Mount Philips disk image and cd to it
+function ph() {
+  if [ ! -e /Volumes/Philips ];
+  then
+    hdid ~/Projects/Philips.sparsebundle
+  fi
+
+  cd /Volumes/Philips/
+}
