@@ -56,6 +56,9 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" Highlight the 80th column
+set colorcolumn=80
+
 " Plugins ******************************************************************
 
 " NERDCommenter
