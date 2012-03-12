@@ -58,3 +58,9 @@
 [submodule "dotfiles/vim/bundle/vim-ruby"]
 	path = dotfiles/vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "dotfiles/vim/bundle/tslime"]
+	path = dotfiles/vim/bundle/tslime
+	url = https://github.com/xaviershay/tslime.vim.git
+[submodule "dotfiles/vim/bundle/turbux-vim"]
+	path = dotfiles/vim/bundle/turbux-vim
+	url = https://github.com/jgdavey/vim-turbux.git
