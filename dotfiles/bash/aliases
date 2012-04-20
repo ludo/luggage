@@ -7,3 +7,6 @@ alias gtl='git log --graph --all --oneline --decorate=short'
 # PGN proxy switch
 alias noproxy='unset http_proxy && unset https_proxy && unset all_proxy'
 alias proxy='export http_proxy=http://nl141-cips2.piap.philips.net:8080 && export https_proxy=$http_proxy && export all_proxy=$http_proxy'
+
+# tmux
+alias tmux="TERM=screen-256color-bce tmux"

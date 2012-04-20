@@ -4,22 +4,28 @@ export EDITOR=vim
 export LANG=C
 export LC_ALL=C
 
-# DirectLife development
-export CATALINA_HOME=/usr/local/tomcat
-export CATALINA_BASE=/Volumes/Philips/ActivityDataService/config/appserver
-export ACTIVITY_DATA_ROOT_PATH=/Volumes/Philips/ActivityDataService/appserver/var/nws
-
 # Node.js
 export NODE_PATH=$HOME/local/lib/node_modules
 
-# Maven2
-export MAVEN_HOME=/usr/share/java/maven-3.0.3
-export M2_HOME=$MAVEN_HOME
-export M2=$M2_HOME/bin
-export JAVA_HOME=/Library/Java/Home
-export PATH=$M2:$PATH
-
-# export TIMESHIFT_URL=http://localhost:3000/timeshift
-
 # RT
 export PERLLIB=/opt/local/lib/perl5/vendor_perl/5.12.3/darwin-multi-2level
+
+# Colors! I want colors! 256 of them.
+case "$TERM" in
+*-256color)
+  alias ssh='TERM=${TERM%-256color} ssh'
+  ;;
+*)
+  POTENTIAL_TERM=${TERM}-256color
+  POTENTIAL_TERMINFO=${TERM:0:1}/$POTENTIAL_TERM
+
+  # better to check $(toe -a | awk '{print $1}') maybe?
+  BOX_TERMINFO_DIR=/usr/share/terminfo
+  [[ -f $BOX_TERMINFO_DIR/$POTENTIAL_TERMINFO ]] && \
+    export TERM=$POTENTIAL_TERM
+
+  HOME_TERMINFO_DIR=$HOME/.terminfo
+  [[ -f $HOME_TERMINFO_DIR/$POTENTIAL_TERMINFO ]] && \
+    export TERM=$POTENTIAL_TERM
+  ;;
+esac

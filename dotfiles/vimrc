@@ -6,7 +6,7 @@ call pathogen#helptags()
 
 syntax enable
 
-set background=light
+set background=dark
 set number
 set ruler
 
@@ -72,6 +72,14 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+
+" CTags
+set tags+=gems.tags
+
+" Ruby
+if !empty($MY_RUBY_HOME)
+  let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
+endif
 
 " Functions *******************************************************************
 
