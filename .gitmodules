@@ -4,9 +4,6 @@
 [submodule "dotfiles/vim/bundle/vim-rails"]
   path = dotfiles/vim/bundle/vim-rails
   url = https://github.com/tpope/vim-rails.git
-[submodule "dotfiles/vim/bundle/nerdtree"]
-  path = dotfiles/vim/bundle/nerdtree
-  url = https://github.com/scrooloose/nerdtree.git
 [submodule "dotfiles/vim/bundle/vim-cucumber"]
   path = dotfiles/vim/bundle/vim-cucumber
   url = https://github.com/tpope/vim-cucumber.git
@@ -37,9 +34,6 @@
 [submodule "dotfiles/vim/bundle/vim-coffee-script"]
   path = dotfiles/vim/bundle/vim-coffee-script
   url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "dotfiles/vim/bundle/command-t"]
-  path = dotfiles/vim/bundle/command-t
-  url = https://github.com/wincent/Command-T.git
 [submodule "dotfiles/vim/bundle/vim-surround"]
   path = dotfiles/vim/bundle/vim-surround
   url = https://github.com/tpope/vim-surround.git
@@ -50,17 +44,8 @@
   path = dotfiles/vim/bundle/tagbar
   url = git://github.com/majutsushi/tagbar.git
 [submodule "dotfiles/vim/bundle/vim-ruby-refactoring"]
-	path = dotfiles/vim/bundle/vim-ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring.git
-[submodule "dotfiles/vim/bundle/vim-css-color"]
-	path = dotfiles/vim/bundle/vim-css-color
-	url = https://github.com/skammer/vim-css-color.git
+  path = dotfiles/vim/bundle/vim-ruby-refactoring
+  url = https://github.com/ecomba/vim-ruby-refactoring.git
 [submodule "dotfiles/vim/bundle/vim-ruby"]
-	path = dotfiles/vim/bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "dotfiles/vim/bundle/tslime"]
-	path = dotfiles/vim/bundle/tslime
-	url = https://github.com/xaviershay/tslime.vim.git
-[submodule "dotfiles/vim/bundle/turbux-vim"]
-	path = dotfiles/vim/bundle/turbux-vim
-	url = https://github.com/jgdavey/vim-turbux.git
+  path = dotfiles/vim/bundle/vim-ruby
+  url = https://github.com/vim-ruby/vim-ruby.git
