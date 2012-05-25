@@ -1,0 +1,6 @@
+# OS X generated files
+.DS_Store
+
+# Vim temp files
+*.swo
+*.swp
