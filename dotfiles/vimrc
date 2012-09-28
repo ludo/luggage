@@ -50,6 +50,10 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Let me edit my crontab!
+" (http://tim.theenchanter.com/2008/07/crontab-temp-file-must-be-edited-in.html)
+set backupskip=/tmp/*,/private/tmp/*
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -66,12 +70,8 @@ let NERDDefaultNesting = 0
 let NERDRemoveExtraSpaces = 1
 let NERDSpaceDelims = 1
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
+" vim-powerline
+" let g:Powerline_symbols = 'fancy'
 
 " CTags
 set tags+=gems.tags
