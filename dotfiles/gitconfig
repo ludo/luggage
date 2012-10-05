@@ -6,7 +6,5 @@
 [color]
 	diff = auto
 	status = auto
-[http]
-	postBuffer = 100M
 [core]
 	excludesfile = /Users/ludo/.gitignore_global

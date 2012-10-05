@@ -1,43 +1,8 @@
-# Prints git or svn info (useful in prompt)
-#
-# Examples:
-#
-#   (git:master) for a git repository
-#   (svn:10835) for a Subversion repository
-__scm_ps1() {
-  local s=
-  if [[ -d ".svn" ]] ; then
-    s=\(svn:$(svn info | sed -n -e '/^Revision: \([0-9]*\).*$/s//\1/p' )\)
-  else
-    local branch=
-    local color=
-
-    branch=$(__git_ps1 "%s")
-
-    case $branch in
-      "deploy")   color="\e[0;33m";; # Yellow
-      "develop")  color="\e[0;33m";; # Yellow
-      "master")   color="\e[0;33m";; # Yellow
-      *)          color="\e[0;32m";; # Green
-    esac
-
-    s=$(__git_ps1 "(git:$color$branch\e[0m)")
-  fi
-  echo -n "$s"
-}
-
 # === Git
 
 # Remove all deleted files from the Git repository
 grm() {
   git status | grep "deleted:" | awk '{print $3}' | xargs git rm --ignore-unmatch
-}
-
-# === Subversion
-
-# Recursively add files to repository
-svn_add_all() {
-  svn status | grep "^\?" | awk '{print $2}' | xargs svn add
 }
 
 # === Utilities
@@ -56,17 +21,4 @@ sync_keys() {
     ssh ${1} "mkdir -p ~/.ssh && cat - >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub
     echo "* All done!"
   fi
-}
-
-# Set terminal title
-function title() { printf '\033]1;%s\a' "$*"; }
-
-# Mount Philips disk image and cd to it
-function ph() {
-  if [ ! -e /Volumes/Philips ];
-  then
-    hdid ~/Projects/Philips.sparsebundle
-  fi
-
-  cd /Volumes/Philips/
 }
