@@ -9,7 +9,7 @@
 #    crontab /etc/config/crontab
 
 USER="me@ludo.is"
-IPFILE=$HOME/.ipwatchdog
+IPFILE=/root/.ipwatchdog
 
 if [ ! -e "$IPFILE" ]; then
   touch $IPFILE
