@@ -8,3 +8,4 @@
 	status = auto
 [core]
 	excludesfile = /Users/ludo/.gitignore_global
+	editor = /usr/bin/vim
