@@ -34,6 +34,12 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Status bar
 set laststatus=2
 
+" File opening/handling
+" (http://stackoverflow.com/questions/1708623/opening-files-in-the-same-folder-as-the-current-file-in-vim)
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+
 " Colors
 let g:solarized_termcolors=256
 let &t_Co=256 " 256 colors
