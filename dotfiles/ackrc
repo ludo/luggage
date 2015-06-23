@@ -1,3 +1,6 @@
 --type-add=ruby=.haml,.rake,.sass,.scss,.feature,.js,.css,.coffee
 --ignore-dir=.meteor
 --ignore-dir=generated
+--ignore-dir=coverage
+--ignore-dir=log
+--ignore-dir=tmp

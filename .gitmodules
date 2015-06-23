@@ -58,3 +58,6 @@
 [submodule "dotfiles/vim/bundle/vim-elixir"]
 	path = dotfiles/vim/bundle/vim-elixir
 	url = git://github.com/elixir-lang/vim-elixir.git
+[submodule "dotfiles/vim/bundle/vim-jsx"]
+	path = dotfiles/vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git

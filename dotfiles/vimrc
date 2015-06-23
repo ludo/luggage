@@ -65,6 +65,9 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" Syntax highlighting for React files
+au BufNewFile,BufRead *.react set filetype=javascript
+
 " Highlight the 80th column
 set colorcolumn=80
 
