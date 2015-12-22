@@ -61,3 +61,6 @@
 [submodule "dotfiles/vim/bundle/vim-jsx"]
 	path = dotfiles/vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "dotfiles/vim/bundle/vim-airline"]
+	path = dotfiles/vim/bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
