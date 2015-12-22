@@ -78,9 +78,6 @@ let NERDDefaultNesting = 0
 let NERDRemoveExtraSpaces = 1
 let NERDSpaceDelims = 1
 
-" vim-powerline
-let g:Powerline_symbols = 'fancy'
-
 " Ruby
 if !empty($MY_RUBY_HOME)
   let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
