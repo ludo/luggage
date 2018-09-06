@@ -5,7 +5,6 @@ call pathogen#infect()
 
 syntax enable
 
-set background=light
 set number
 set ruler
 
@@ -38,12 +37,15 @@ set laststatus=2
 " (http://stackoverflow.com/questions/1708623/opening-files-in-the-same-folder-as-the-current-file-in-vim)
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
-map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :sp <C-R>=expand("%:p:h") . "/" <CR>
+map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 
 " Colors
-let g:solarized_termcolors=256
-let &t_Co=256 " 256 colors
-colorscheme solarized
+set termguicolors
+" let g:solarized_termcolors=256
+" let &t_Co=256 " 256 colors
+" colorscheme solarized
+colorscheme solarized8_light_flat
 
 " Disable arrow keys
 map <up> <nop>
@@ -83,6 +85,9 @@ if !empty($MY_RUBY_HOME)
   let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
 endif
 
+" Use ag instead of ack
+let g:ackprg = 'ag --vimgrep'
+
 " Functions *******************************************************************
 
 " Remove trailing whitespaces in files
@@ -94,3 +99,5 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+autocmd BufRead,BufNewFile *.prawn set filetype=ruby
