@@ -41,11 +41,12 @@ map ,s :sp <C-R>=expand("%:p:h") . "/" <CR>
 map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 
 " Colors
-set termguicolors
-" let g:solarized_termcolors=256
+" set termguicolors
+let g:solarized_termcolors=256
 " let &t_Co=256 " 256 colors
 " colorscheme solarized
-colorscheme solarized8_light_flat
+set background=light
+colorscheme solarized
 
 " Disable arrow keys
 map <up> <nop>
